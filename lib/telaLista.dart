@@ -10,15 +10,16 @@ class TelaLista extends StatefulWidget {
 }
 
 class _TelaListaState extends State<TelaLista> {
-  String urlinha =  " ";
+  String urlinha = " ";
   @override
   void initState() {
     super.initState();
-   
+
     setState(() {
       urlinha = urlLida.getUrl();
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +28,7 @@ class _TelaListaState extends State<TelaLista> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(5, 100,0, 0),
+              padding: const EdgeInsets.fromLTRB(5, 100, 0, 0),
               child: ListTile(
                 leading: const Icon(Icons.home),
                 title: const Text("Ler Qr"),
@@ -65,7 +66,8 @@ class _TelaListaState extends State<TelaLista> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              child: Text(urlinha),
+              width: 100,
+              height: 100,
             )
           ],
         ),
