@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:trabalho_final/controller/url_api.dart';
+import 'package:trabalho_final/telaCadastro.dart';
 import 'telaLista.dart';
 
 UrlApi urlLida = UrlApi();
@@ -35,7 +36,9 @@ class _TelaInicial extends State<TelaInicial> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title:const  Text('Informe sua Api')
+      ),
       drawer: Drawer(
          child: Column(
           children: [
@@ -69,31 +72,45 @@ class _TelaInicial extends State<TelaInicial> {
                 },
               ),
             ),
+             Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: const Icon(Icons.home),
+                title: const Text("Cadastro"),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Cadastro(),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
          ),
       ), 
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(110, 0, 110, 0),
+        padding: const EdgeInsets.fromLTRB(90, 0, 90, 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          
           children: [
-             Container(
+           const SizedBox(
               height: 20,
-              child: const  Text('Use o leitor Qr ou Digite a Url')
+              child: Text('Use o leitor Qr ou Digite a Url')
             ),
             SizedBox(
               width: 180,
               child: ElevatedButton(
-                child: const Text('Ler Qr'),
                 onPressed: lerQr,
+                child: const Text('Ler Qr'),
               ),
             ),
             Form(
               key: _formKey,
               child: Column(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 180,
                     height: 65,
                     child: TextFormField(
