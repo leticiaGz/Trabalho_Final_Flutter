@@ -1,3 +1,4 @@
+/* Classe que Mapeia o Json que traz a lista */
 class Lista{
   int id;
   String nome;

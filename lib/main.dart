@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:trabalho_final/telaInicial.dart';
+import 'package:trabalho_final/Pages/tela_inicial.dart';
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: TelaInicial(),
       debugShowCheckedModeBanner: false)
   );

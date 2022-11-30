@@ -1,3 +1,5 @@
+/* Classe que Mapeia o Json de Detalhes */
+
 class Detalhes{
   int id;
   String nome;

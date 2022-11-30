@@ -1,7 +1,9 @@
+
+/*Classe onde Salvo a Url lida, no Obj Instanciado */
 class UrlApi {
  String url= " ";
 
-  saveUrl(String urlQr){
+  setUrl(String urlQr){
     url = urlQr;
   }
 
